@@ -1,0 +1,352 @@
+<!--
+  Portfolio pessoal — Everton Rei
+  Stack: HTML5 + CSS3 + JS vanilla (sem framework, sem build)
+  Bilíngue PT/EN com toggle (localStorage persiste escolha)
+  Deploy: GitHub Pages
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Everton Rei | Head de Produto e Inovação</title>
+  <meta name="description" content="Everton Rei — Head de Produto e Inovação. 16 anos conectando produto, operação, tecnologia e liderança. CSPO, ITIL 4, Management 3.0.">
+  <meta name="keywords" content="Product Owner, Head de Produto, Product Manager, Scrum, Kanban, CSPO, ITIL, DevOps, ERP, Telecom, AgTech, OKR, Roadmap, Discovery, Backlog, Stakeholder Management, Liderança, Inovação">
+  <meta property="og:title" content="Everton Rei | Head de Produto e Inovação">
+  <meta property="og:description" content="16 anos transformando caos em previsibilidade. De suporte N1 a Head de Produto e Inovação.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://evertonssj4.github.io/portfolio-rei/">
+  <meta name="theme-color" content="#1c1e22">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Fira+Code:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <nav class="header__nav">
+      <a href="#about" class="header__link" data-pt="Sobre" data-en="About">Sobre</a>
+      <a href="#journey" class="header__link" data-pt="Trajetória" data-en="Journey">Trajetória</a>
+      <a href="#projects" class="header__link" data-pt="Projetos" data-en="Projects">Projetos</a>
+      <a href="#certifications" class="header__link" data-pt="Certificações" data-en="Certifications">Certificações</a>
+      <a href="#contact" class="header__link" data-pt="Contato" data-en="Contact">Contato</a>
+    </nav>
+    <div class="header__right">
+      <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+        <span class="lang-toggle__option lang-toggle__option--active" data-lang="pt">PT</span>
+        <span class="lang-toggle__separator">|</span>
+        <span class="lang-toggle__option" data-lang="en">EN</span>
+      </button>
+      <div class="header__socials">
+        <a href="https://github.com/EvertonSSJ4" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/everton-rei/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+    <button class="header__hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="blue-light blue-light--header"></div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#about" class="mobile-nav__link" data-pt="Sobre" data-en="About">Sobre</a>
+    <a href="#journey" class="mobile-nav__link" data-pt="Trajetória" data-en="Journey">Trajetória</a>
+    <a href="#projects" class="mobile-nav__link" data-pt="Projetos" data-en="Projects">Projetos</a>
+    <a href="#certifications" class="mobile-nav__link" data-pt="Certificações" data-en="Certifications">Certificações</a>
+    <a href="#contact" class="mobile-nav__link" data-pt="Contato" data-en="Contact">Contato</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__presentation">
+      <span class="hero__greeting" data-pt="Olá!" data-en="Hello!">Olá!</span>
+      <h1 class="hero__name">Everton Rei</h1>
+      <div class="hero__role">
+        <span id="typewriter"></span><span class="hero__cursor">|</span>
+      </div>
+      <p class="hero__tagline" data-pt="16 anos transformando caos em previsibilidade. De suporte N1 a Head de Produto e Inovação." data-en="16 years turning chaos into predictability. From N1 support to Head of Product and Innovation.">16 anos transformando caos em previsibilidade. De suporte N1 a Head de Produto e Inovação.</p>
+    </div>
+    <div class="terminal-card">
+      <div class="terminal-card__chrome">
+        <span class="terminal-card__dot terminal-card__dot--red"></span>
+        <span class="terminal-card__dot terminal-card__dot--yellow"></span>
+        <span class="terminal-card__dot terminal-card__dot--green"></span>
+      </div>
+      <pre class="terminal-card__code" id="terminalCode" data-pt='Profile {
+  Role: Head de Produto e Inovação
+  Experience: 16+ anos
+  Domains: ERP, Telecom, AgTech, GovTech
+  Teams: Squads multidisciplinares (dev, QA, ops)
+  Languages: PT (nativo), EN (C1), ES (B1)
+}
+
+Approach {
+  Discovery: Dual Track, dados antes de opinião
+  Metrics: Lead Time, Throughput, NPS, SLA
+  Stack: Grafana, Docker, MikroTik, Jira
+  DevOps: Estabilizar antes de escalar
+}' data-en='Profile {
+  Role: Head of Product and Innovation
+  Experience: 16+ years
+  Domains: ERP, Telecom, AgTech, GovTech
+  Teams: Cross-functional squads (dev, QA, ops)
+  Languages: PT (native), EN (C1), ES (B1)
+}
+
+Approach {
+  Discovery: Dual Track, data before opinion
+  Metrics: Lead Time, Throughput, NPS, SLA
+  Stack: Grafana, Docker, MikroTik, Jira
+  DevOps: Stabilize before scaling
+}'>Profile {
+  Role: Head de Produto e Inovação
+  Experience: 16+ anos
+  Domains: ERP, Telecom, AgTech, GovTech
+  Teams: Squads multidisciplinares (dev, QA, ops)
+  Languages: PT (nativo), EN (C1), ES (B1)
+}
+
+Approach {
+  Discovery: Dual Track, dados antes de opinião
+  Metrics: Lead Time, Throughput, NPS, SLA
+  Stack: Grafana, Docker, MikroTik, Jira
+  DevOps: Estabilizar antes de escalar
+}</pre>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about reveal" id="about">
+    <h2 class="section-title" data-pt="Sobre" data-en="About">Sobre</h2>
+    <div class="about__content">
+      <p class="about__text" data-pt="Hoje lidero produto, inovação e times de desenvolvimento. Já conduzi squads multidisciplinares em ERP, telecom, agtech e govtech, sempre com foco em previsibilidade e resultado. Antes disso, passei por redes, infraestrutura, operações críticas e gestão de equipes. Comecei no suporte técnico, onde aprendi a ouvir sob pressão, resolver com pouco e entregar quando o cenário era contra." data-en="Today I lead product, innovation and development teams. I've managed cross-functional squads across ERP, telecom, agtech and govtech, always focused on predictability and outcomes. Before that, I went through networking, infrastructure, critical operations and team management. I started in tech support, where I learned to listen under pressure, solve with little and deliver when the odds were against me.">Hoje lidero produto, inovação e times de desenvolvimento. Já conduzi squads multidisciplinares em ERP, telecom, agtech e govtech, sempre com foco em previsibilidade e resultado. Antes disso, passei por redes, infraestrutura, operações críticas e gestão de equipes. Comecei no suporte técnico, onde aprendi a ouvir sob pressão, resolver com pouco e entregar quando o cenário era contra.</p>
+      <p class="about__text" data-pt="Não sou um perfil de caixa única. Consigo conversar com o dev sobre arquitetura, com o diretor sobre roadmap e com a operação sobre SLA no mesmo dia. Produto, tecnologia, operação e negócio não são silos pra mim. São o mesmo problema visto de ângulos diferentes." data-en="I don't fit a single box. I can talk architecture with the dev, roadmap with the director and SLA with operations on the same day. Product, technology, operations and business aren't silos to me. They're the same problem seen from different angles.">Não sou um perfil de caixa única. Consigo conversar com o dev sobre arquitetura, com o diretor sobre roadmap e com a operação sobre SLA no mesmo dia. Produto, tecnologia, operação e negócio não são silos pra mim. São o mesmo problema visto de ângulos diferentes.</p>
+      <p class="about__text" data-pt="Entrego melhor quando o objetivo é claro e o time tem autonomia para executar. Gosto de ambientes onde a entrega gera impacto real, não só processo." data-en="I do my best work when the goal is clear and the team owns the outcome. I thrive where delivery creates real impact, not just process.">Entrego melhor quando o objetivo é claro e o time tem autonomia para executar. Gosto de ambientes onde a entrega gera impacto real, não só processo.</p>
+    </div>
+    <div class="blue-light blue-light--about"></div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section class="journey" id="journey">
+    <h2 class="section-title reveal" data-pt="Trajetória" data-en="Journey">Trajetória</h2>
+    <div class="timeline">
+
+      <div class="timeline__item reveal reveal-left">
+        <div class="timeline__marker"></div>
+        <div class="timeline__card">
+          <div class="timeline__card-chrome">
+            <span class="terminal-card__dot terminal-card__dot--red"></span>
+            <span class="terminal-card__dot terminal-card__dot--yellow"></span>
+            <span class="terminal-card__dot terminal-card__dot--green"></span>
+          </div>
+          <span class="timeline__period">2020 — <span data-pt="Atual" data-en="Present">Atual</span></span>
+          <h3 class="timeline__role" data-pt="Head de Produto | Gerente de Produto | PO" data-en="Head of Product | Product Manager | PO">Head de Produto | Gerente de Produto | PO</h3>
+          <span class="timeline__sector" data-pt="ERP e Produto Digital" data-en="ERP and Digital Product">ERP e Produto Digital</span>
+          <p class="timeline__desc" data-pt="Liderei squads de desenvolvimento em um ERP que substituiu dois sistemas legados. Conduzi backlog estratégico com foco em previsibilidade. Downtime caiu para zero. Performance do time subiu 35%. Criei bots que passaram a resolver 70% dos chamados sozinhos. A atuação foi de operacional para liderança de portfólio, com influência direta em decisões executivas e alinhamento entre produto, tecnologia e operação." data-en="Led development squads building an ERP that replaced two legacy systems. Drove strategic backlog with a focus on predictability. Downtime dropped to zero. Team performance improved by 35%. Built bots that started resolving 70% of tickets autonomously. Moved from operational role to portfolio leadership, with direct influence on executive decisions and cross-functional alignment between product, tech and operations.">Liderei squads de desenvolvimento em um ERP que substituiu dois sistemas legados. Conduzi backlog estratégico com foco em previsibilidade. Downtime caiu para zero. Performance do time subiu 35%. Criei bots que passaram a resolver 70% dos chamados sozinhos. A atuação foi de operacional para liderança de portfólio, com influência direta em decisões executivas e alinhamento entre produto, tecnologia e operação.</p>
+        </div>
+      </div>
+
+      <div class="timeline__item reveal reveal-right">
+        <div class="timeline__marker"></div>
+        <div class="timeline__card">
+          <div class="timeline__card-chrome">
+            <span class="terminal-card__dot terminal-card__dot--red"></span>
+            <span class="terminal-card__dot terminal-card__dot--yellow"></span>
+            <span class="terminal-card__dot terminal-card__dot--green"></span>
+          </div>
+          <span class="timeline__period">2025</span>
+          <h3 class="timeline__role" data-pt="Senior PO | Gerente DevOps | IA Aplicada" data-en="Senior PO | DevOps Manager | Applied AI">Senior PO | Gerente DevOps | IA Aplicada</h3>
+          <span class="timeline__sector" data-pt="AgTech e Monitoramento Inteligente" data-en="AgTech and Smart Monitoring">AgTech e Monitoramento Inteligente</span>
+          <p class="timeline__desc" data-pt="Reestruturei o principal produto da empresa em 6 meses, recuperando confiança da diretoria. Implantei monitoramento com IA para armazéns: falhas não detectadas caíram 65%. Criei matriz de criticidade que reduziu tempo de resposta em 40%. Eliminei retorno físico de equipamentos com solução remota. Assumi DevOps: estabilizei ambientes, revisei infraestrutura, recuperei confiabilidade. Interface direta com cofundadores." data-en="Restructured the company's main product in 6 months, restoring board confidence. Deployed AI monitoring for warehouses: undetected failures dropped 65%. Built a criticality matrix that cut response time by 40%. Eliminated physical equipment returns with remote solutions. Took over DevOps: stabilized environments, reviewed infrastructure, recovered reliability. Direct interface with co-founders.">Reestruturei o principal produto da empresa em 6 meses, recuperando confiança da diretoria. Implantei monitoramento com IA para armazéns: falhas não detectadas caíram 65%. Criei matriz de criticidade que reduziu tempo de resposta em 40%. Eliminei retorno físico de equipamentos com solução remota. Assumi DevOps: estabilizei ambientes, revisei infraestrutura, recuperei confiabilidade. Interface direta com cofundadores.</p>
+        </div>
+      </div>
+
+      <div class="timeline__item reveal reveal-left">
+        <div class="timeline__marker"></div>
+        <div class="timeline__card">
+          <div class="timeline__card-chrome">
+            <span class="terminal-card__dot terminal-card__dot--red"></span>
+            <span class="terminal-card__dot terminal-card__dot--yellow"></span>
+            <span class="terminal-card__dot terminal-card__dot--green"></span>
+          </div>
+          <span class="timeline__period">2013 — 2020</span>
+          <h3 class="timeline__role" data-pt="PO | Líder de Operações" data-en="PO | Operations Leader">PO | Líder de Operações</h3>
+          <span class="timeline__sector" data-pt="Telecom" data-en="Telecom">Telecom</span>
+          <p class="timeline__desc" data-pt="De analista N1 a líder de 18 pessoas, com três promoções no caminho. Otimizei roteirização e saldo: de R$100 mil/mês para R$20 mil (economia de R$80K/mês). Reduzi escalonamentos em 40% alinhando times operacionais e técnicos. Criei manuais e fluxos que viraram padrão interno." data-en="From N1 analyst to leading 18 people, with three promotions along the way. Optimized routing and balance management: from R$100K/month to R$20K (saving R$80K/month). Reduced escalations by 40% by aligning operational and technical teams. Created manuals and workflows that became the internal standard.">De analista N1 a líder de 18 pessoas, com três promoções no caminho. Otimizei roteirização e saldo: de R$100 mil/mês para R$20 mil (economia de R$80K/mês). Reduzi escalonamentos em 40% alinhando times operacionais e técnicos. Criei manuais e fluxos que viraram padrão interno.</p>
+        </div>
+      </div>
+
+      <div class="timeline__item reveal reveal-right">
+        <div class="timeline__marker"></div>
+        <div class="timeline__card">
+          <div class="timeline__card-chrome">
+            <span class="terminal-card__dot terminal-card__dot--red"></span>
+            <span class="terminal-card__dot terminal-card__dot--yellow"></span>
+            <span class="terminal-card__dot terminal-card__dot--green"></span>
+          </div>
+          <span class="timeline__period">2008 — 2013</span>
+          <h3 class="timeline__role" data-pt="Coordenador de Operações" data-en="Operations Coordinator">Coordenador de Operações</h3>
+          <span class="timeline__sector" data-pt="Operações e Gestão" data-en="Operations and Management">Operações e Gestão</span>
+          <p class="timeline__desc" data-pt="Gestão de times operacionais com foco em padronização e entrega contínua. Treinamentos estruturados reduziram erros em 30%. Relatórios estratégicos usados pela diretoria para tomada de decisão." data-en="Managed operational teams focused on standardization and continuous delivery. Structured training cut errors by 30%. Strategic reports used by directors for decision making.">Gestão de times operacionais com foco em padronização e entrega contínua. Treinamentos estruturados reduziram erros em 30%. Relatórios estratégicos usados pela diretoria para tomada de decisão.</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="blue-light blue-light--journey"></div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <h2 class="section-title reveal" data-pt="Projetos" data-en="Projects">Projetos</h2>
+
+    <div class="project project--odd reveal">
+      <div class="project__image-wrapper">
+        <img src="assets/images/Inteligencia.jpg" alt="Dashboard do Analisador de Protocolos" class="project__image" loading="lazy">
+      </div>
+      <div class="project__content">
+        <h3 class="project__title" data-pt="Pulse Control" data-en="Pulse Control">Pulse Control</h3>
+        <span class="project__subtitle" data-pt="Inteligência aplicada ao controle operacional" data-en="Intelligence applied to operational control">Inteligência aplicada ao controle operacional</span>
+        <p class="project__desc" data-pt="Quando a operação cresce, o volume de protocolos vira ruído. Este projeto nasceu para transformar esse ruído em informação. Cruza dados de abertura diária, identifica onde a operação trava, quais sistemas acumulam mais demanda e quais entidades geram mais retorno. SLA em tempo real, ranking por volume e visão clara de gargalos. O objetivo é simples: ninguém decide no escuro." data-en="When operations scale, the volume of protocols becomes noise. This project was built to turn that noise into information. It cross-references daily opening data, identifies where operations stall, which systems accumulate the most demand and which entities generate the most returns. Real-time SLA tracking, volume rankings and a clear view of bottlenecks. The goal is simple: no one decides in the dark.">Quando a operação cresce, o volume de protocolos vira ruído. Este projeto nasceu para transformar esse ruído em informação. Cruza dados de abertura diária, identifica onde a operação trava, quais sistemas acumulam mais demanda e quais entidades geram mais retorno. SLA em tempo real, ranking por volume e visão clara de gargalos. O objetivo é simples: ninguém decide no escuro.</p>
+        <div class="project__badges">
+          <span class="badge" data-pt="Controle de SLA" data-en="SLA Control">Controle de SLA</span>
+          <span class="badge" data-pt="Rankings por volume" data-en="Volume Rankings">Rankings por volume</span>
+          <span class="badge" data-pt="Visão operacional" data-en="Operational Insight">Visão operacional</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project project--even reveal">
+      <div class="project__image-wrapper">
+        <img src="assets/images/Score.jpg" alt="Interface do Score de User Stories" class="project__image" loading="lazy">
+      </div>
+      <div class="project__content">
+        <h3 class="project__title" data-pt="Sprint Shield" data-en="Sprint Shield">Sprint Shield</h3>
+        <span class="project__subtitle" data-pt="Prever risco antes da primeira linha de código" data-en="Predicting risk before a single line of code">Prever risco antes da primeira linha de código</span>
+        <p class="project__desc" data-pt="A maioria das histórias que geram retrabalho não falham na esteira. Falham antes, no refinamento. Este motor de análise avalia cada User Story em quatro dimensões: negócio, técnica, cenários de teste e Definition of Ready. Gera uma nota de maturidade, aponta lacunas e sugere perguntas que o time deveria ter feito. Resultado: histórias mal escritas não entram na sprint." data-en="Most stories that cause rework don't fail in the pipeline. They fail earlier, during refinement. This analysis engine evaluates each User Story across four dimensions: business, technical, test scenarios and Definition of Ready. It generates a maturity score, flags gaps and suggests questions the team should have asked. Result: poorly written stories don't enter the sprint.">A maioria das histórias que geram retrabalho não falham na esteira. Falham antes, no refinamento. Este motor de análise avalia cada User Story em quatro dimensões: negócio, técnica, cenários de teste e Definition of Ready. Gera uma nota de maturidade, aponta lacunas e sugere perguntas que o time deveria ter feito. Resultado: histórias mal escritas não entram na sprint.</p>
+        <div class="project__badges">
+          <span class="badge" data-pt="Nota de maturidade" data-en="Maturity Score">Nota de maturidade</span>
+          <span class="badge" data-pt="4 dimensões" data-en="4 Dimensions">4 dimensões</span>
+          <span class="badge" data-pt="Lacunas identificadas" data-en="Gap Detection">Lacunas identificadas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="certifications" id="certifications">
+    <h2 class="section-title reveal" data-pt="Certificações e Formação" data-en="Certifications and Education">Certificações e Formação</h2>
+
+    <div class="certs-grid reveal">
+      <div class="cert-badge">
+        <img class="cert-badge__icon" src="assets/images/cspo.png" alt="CSPO Badge" loading="lazy">
+        <span class="cert-badge__name">CSPO</span>
+        <span class="cert-badge__org">Scrum Alliance</span>
+        <!-- year hidden -->
+      </div>
+      <div class="cert-badge">
+        <img class="cert-badge__icon" src="assets/images/itil4.png" alt="ITIL 4 Foundation Badge" loading="lazy">
+        <span class="cert-badge__name">ITIL 4</span>
+        <span class="cert-badge__org">PeopleCert</span>
+        <!-- year hidden -->
+      </div>
+      <div class="cert-badge">
+        <img class="cert-badge__icon" src="assets/images/mgmt30.png" alt="Management 3.0 Badge" loading="lazy">
+        <span class="cert-badge__name">Management 3.0</span>
+        <span class="cert-badge__org">Management 3.0</span>
+        <!-- year hidden -->
+      </div>
+      <div class="cert-badge">
+        <img class="cert-badge__icon" src="assets/images/kmp2.png" alt="KMP II Badge" loading="lazy">
+        <span class="cert-badge__name">KMP II</span>
+        <span class="cert-badge__org">Kanban University</span>
+        <!-- year hidden -->
+      </div>
+      <div class="cert-badge">
+        <img class="cert-badge__icon cert-badge__icon--wide" src="assets/images/mikrotik-white.svg" alt="MikroTik MTCNA" loading="lazy">
+        <span class="cert-badge__name">MTCNA</span>
+        <span class="cert-badge__org">MikroTik</span>
+        <!-- year hidden -->
+      </div>
+      <div class="cert-badge">
+        <img class="cert-badge__icon cert-badge__icon--wide" src="assets/images/mikrotik-white.svg" alt="MikroTik MTCRE" loading="lazy">
+        <span class="cert-badge__name">MTCRE</span>
+        <span class="cert-badge__org">MikroTik</span>
+        <!-- year hidden -->
+      </div>
+    </div>
+
+    <h3 class="education-title reveal" data-pt="Formação Acadêmica" data-en="Education">Formação Acadêmica</h3>
+    <div class="education-grid reveal">
+      <div class="education-item">
+        <span class="education-item__degree" data-pt="Análise e Desenvolvimento de Sistemas" data-en="Systems Analysis and Development">Análise e Desenvolvimento de Sistemas</span>
+        <span class="education-item__year">2025</span>
+      </div>
+      <div class="education-item">
+        <span class="education-item__degree" data-pt="Pós em IA Aplicada a Negócios" data-en="Post-grad in AI Applied to Business">Pós em IA Aplicada a Negócios</span>
+        <span class="education-item__year">2025</span>
+      </div>
+      <div class="education-item">
+        <span class="education-item__degree" data-pt="MBA Gestão de Projetos e Metodologias Ágeis" data-en="MBA Project Management and Agile">MBA Gestão de Projetos e Metodologias Ágeis</span>
+        <span class="education-item__year">2024</span>
+      </div>
+      <div class="education-item">
+        <span class="education-item__degree" data-pt="MBA Gestão de TI Corporativa" data-en="MBA Corporate IT Management">MBA Gestão de TI Corporativa</span>
+        <span class="education-item__year">2024</span>
+      </div>
+      <div class="education-item">
+        <span class="education-item__degree" data-pt="MBA Gestão Corporativa Estratégica" data-en="MBA Strategic Corporate Management">MBA Gestão Corporativa Estratégica</span>
+        <span class="education-item__year">2023</span>
+      </div>
+      <div class="education-item">
+        <span class="education-item__degree" data-pt="Pós em Arquitetura de Sistemas" data-en="Post-grad in Systems Architecture">Pós em Arquitetura de Sistemas</span>
+        <span class="education-item__year">2023</span>
+      </div>
+      <div class="education-item">
+        <span class="education-item__degree" data-pt="Pós em Gestão Estratégica de Pessoas" data-en="Post-grad in Strategic People Management">Pós em Gestão Estratégica de Pessoas</span>
+        <span class="education-item__year">2022</span>
+      </div>
+      <div class="education-item">
+        <span class="education-item__degree" data-pt="Pós em Redes Estruturadas" data-en="Post-grad in Structured Networks">Pós em Redes Estruturadas</span>
+        <span class="education-item__year">2022</span>
+      </div>
+      <div class="education-item">
+        <span class="education-item__degree" data-pt="Bacharel em Segurança da Informação" data-en="Bachelor in Information Security">Bacharel em Segurança da Informação</span>
+        <span class="education-item__year">2021</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2 class="contact__headline reveal" data-pt="Construa produtos relevantes e com impacto real." data-en="Build relevant products with real impact.">Construa produtos relevantes e com impacto real.</h2>
+    <p class="contact__sub reveal" data-pt="Nada de achismos. Só estratégia, agilidade e entrega com propósito." data-en="No guesswork. Just strategy, agility and purposeful delivery.">Nada de achismos. Só estratégia, agilidade e entrega com propósito.</p>
+    <div class="contact__socials reveal">
+      <a href="https://github.com/EvertonSSJ4" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg class="contact__social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/everton-rei/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg class="contact__social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+    <a href="mailto:evertonrei@gmail.com" class="contact__email">evertonrei@gmail.com</a>
+    <!-- location removed -->
+    <div class="blue-light blue-light--contact"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>2026 [Everton Rei]</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
