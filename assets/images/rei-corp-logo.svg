@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" fill="none">
+  <rect width="500" height="350" fill="#F5F0EB"/>
+  <!-- Crown - wider, bolder, with overlapping diamonds like original -->
+  <g fill="#0E0E10" transform="translate(110, 15)">
+    <!-- Outer left blade -->
+    <polygon points="10,165 45,70 65,165"/>
+    <!-- Inner left blade -->
+    <polygon points="45,165 80,30 105,165"/>
+    <!-- Center left overlap -->
+    <polygon points="85,165 110,10 135,165"/>
+    <!-- Center right overlap -->
+    <polygon points="145,165 170,10 195,165"/>
+    <!-- Inner right blade -->
+    <polygon points="175,165 200,30 235,165"/>
+    <!-- Outer right blade -->
+    <polygon points="215,165 235,70 270,165"/>
+    <!-- Horizontal divider bar -->
+    <rect x="10" y="148" width="260" height="20"/>
+  </g>
+  <!-- REI CORP text -->
+  <text x="250" y="235" text-anchor="middle" font-family="'Poppins', 'Segoe UI', Arial, sans-serif" font-weight="400" font-size="28" letter-spacing="14" fill="#0E0E10">REI CORP</text>
+</svg>
