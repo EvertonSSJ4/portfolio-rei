@@ -4,8 +4,8 @@
   var currentLang = localStorage.getItem('lang') || 'pt';
 
   var roles = {
-    pt: ['Head de Produto', 'Head de Inovação', 'Gerente DevOps', 'Senior Product Owner'],
-    en: ['Head of Product', 'Head of Innovation', 'DevOps Manager', 'Senior Product Owner']
+    pt: ['Head de Engenharia de IA', 'Head de Produto', 'Head de Inovação', 'Gerente DevOps', 'Senior Product Owner'],
+    en: ['Head of AI Engineering', 'Head of Product', 'Head of Innovation', 'DevOps Manager', 'Senior Product Owner']
   };
 
   // TYPEWRITER

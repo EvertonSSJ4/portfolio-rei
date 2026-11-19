@@ -886,3 +886,31 @@ body {
     height: 36px;
   }
 }
+
+/* PROJETOS: terminal no lugar da imagem e link em badge */
+.terminal-card--project {
+  max-width: 100%;
+}
+
+.badge--link {
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.badge--link:hover,
+.badge--link:focus-visible {
+  background: rgba(112, 0, 255, 0.35);
+}
+
+/* As manchas de luz decorativas passavam da borda e criavam rolagem lateral em toda largura */
+html,
+body {
+  overflow-x: clip;
+}
+
+/* No tablet o cabeçalho não cabia com os ícones sociais (eles seguem no rodapé de contato) */
+@media (min-width: 768px) and (max-width: 900px) {
+  .header__socials {
+    display: none;
+  }
+}
